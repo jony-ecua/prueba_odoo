@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "banco",
+    'name': "Banco",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modulo para la gestio cuentas, movimientos de un banco""",
 
     'description': """
-        Long description of module's purpose
+       Modulo que permite anañdir, modificar y eliminar cuentas
     """,
 
     'author': "My Company",
-    'website': "http://www.yourcompany.com",
+   #se elimina la pagina generada. 
+    'website': "",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
@@ -27,6 +27,8 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/view_account.xml',
+        'views/view_movement.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

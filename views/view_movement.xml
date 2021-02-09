@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<odoo>
+    <data>
+        <!-- TREE   -->
+        <record model="ir.ui.view" id="movement_tree_view" >
+            <field name="name">movement.tree</field>
+            <field name="model">banco.movement</field>
+            <field name="arch" type="xml">
+                <tree string="List de Account">
+                    <field name="timestamp" />
+                    <field name="amount"/>
+                    <field name="balance" />
+                    <field name="description" />
+                </tree>                               
+            </field> 
+        </record>
+      
+        <!-- FORM -->
+        <record model="ir.ui.view" id="movement_form_view">
+            <field name="name">movement.form</field>
+            <field name="model">banco.movement</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Crear nueva cuenta">
+                    <sheet>
+                        <separator string="Datos de movimientos" colspan="2"/>
+                        <group>
+                            <field name="timestamp" />
+                            <field name="amount"/>
+                            <field name="balance" />
+                            <field name="description" />
+                        </group>                      
+                    </sheet>
+                </form>
+            </field>
+        </record>
+       
+    </data>
+</odoo>

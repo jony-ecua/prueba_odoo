@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<odoo>
+    <data>
+        <!-- TREE   -->
+        <record model="ir.ui.view" id="account_tree_view" >
+            <field name="name">account.tree</field>
+            <field name="model">banco.account</field>
+            <field name="arch" type="xml">
+                <tree string="List de Account">
+                    <field name="descripcion" />
+                    <field name="credit_line"/>
+                    <field name="begin_balance" />
+                    <field name="begin_balance_timestamp" />
+                    <field name="accountType"/>
+                </tree>                               
+            </field> 
+        </record>
+      
+        <!-- FORM -->
+        <record model="ir.ui.view" id="account_form_view">
+            <field name="name">account.form</field>
+            <field name="model">banco.account</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Crear nueva cuenta">
+                    <sheet>
+                        <separator string="Datos de la cuenta" colspan="2"/>
+                        <group>
+                            <field name="descripcion"/>
+                            <field name="balance"/>
+                            <field name="credit_line"/>
+                            <field name="begin_balance"/>
+                            <field name="begin_balance_timestamp"/>
+                            <field name="accountType" />
+                        </group> 
+                        <notebook>
+                            <page string="FECHAS">
+                                <field name="movement">
+                                    <tree string="Fecha Limite">
+                                        <field name="timestamp"/>
+                                    </tree>
+                                </field>    
+                            </page>
+                        </notebook>                     
+                    </sheet>
+                </form>
+            </field>
+        </record>
+       
+    </data>
+</odoo>
