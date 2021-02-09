@@ -39,7 +39,16 @@ and open the template in the editor.
                             <field name="begin_balance"/>
                             <field name="begin_balance_timestamp"/>
                             <field name="accountType" />
-                        </group>                      
+                        </group> 
+                        <notebook>
+                            <page string="FECHAS">
+                                <field name="movement">
+                                    <tree string="Fecha Limite">
+                                        <field name="timestamp"/>
+                                    </tree>
+                                </field>    
+                            </page>
+                        </notebook>                     
                     </sheet>
                 </form>
             </field>
